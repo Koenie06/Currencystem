@@ -1,4 +1,4 @@
-export default class CurrencyItem {
+module.exports = class CurrencyItem {
     constructor(item) {
 
         if(!item?.name) return null;
@@ -6,6 +6,7 @@ export default class CurrencyItem {
         if(!item?.price) return null;
         if(!item?.createdAt) item.createdAt = Date.now();
         if(!item?.solds) item.solds = 0;
+        if(!item?.use) item.use = false;
 
         /**
          * The name of the CurrencyItem.
@@ -38,12 +39,22 @@ export default class CurrencyItem {
         this.solds = item.solds || 0;
 
         /**
+         * What happens when the item is being used.
+         * @type {Function}
+         */
+        this.use = item.use;
+
+        /**
          * The remaining amount that is left to be sold.
          * @type {Number}
          * @not_required
          */
         if(item.stock) this.stock = item.stock;
 
+        return this;
+    };
+
+    toJSON() {
         return this;
     };
 };
