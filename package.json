@@ -10,13 +10,27 @@
     "currency",
     "economy",
     "money",
+    "sqlite",
     "mysql",
-    "mongodb",
+    "mongo",
     "json"
   ],
+  "exports": {
+    ".": "./src/index.js",
+    "./mysql": "./src/mysql.js",
+    "./mysql.js": "./src/mysql.js",
+    "./mongo": "./src/mongo.js",
+    "./mongo.js": "./src/mongo.js",
+    "./sqlite": "./src/sqlite.js",
+    "./sqlite.js": "./src/sqlite.js",
+    "./json": "./src/index.js",
+    "./json.js": "./src/index.js"
+  },
   "author": "Koenie06",
   "license": "ISC",
   "dependencies": {
-    "mysql2": "^2.3.3"
+    "mongoose": "^6.5.2",
+    "mysql2": "^2.3.3",
+    "quick.db": "^9.0.6"
   }
 }
