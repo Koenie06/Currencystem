@@ -18,5 +18,9 @@
   "license": "ISC",
   "dependencies": {
     "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "jsdoc-md": "^11.0.2",
+    "jsdoc-to-markdown": "^9.1.1"
   }
 }
